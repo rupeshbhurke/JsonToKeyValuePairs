@@ -8,8 +8,8 @@ Generally JSON is converted to & from definite objects. But I had a requirement 
 3. StringFields
 
 Where, 
-  # class StringField has two properties, viz. Name & Value.
-  # StringFields is IEnumerable<StringFields>
+  class StringField has two properties, viz. Name & Value.
+  StringFields is IEnumerable<StringFields>
 
 I could not find any readymade solution So I created this one.
 
