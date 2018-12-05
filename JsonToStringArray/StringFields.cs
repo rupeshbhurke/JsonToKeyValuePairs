@@ -12,7 +12,7 @@ namespace JsonToStringArray
         {
             List<KeyValuePair<string, string>> pairs;
             JsonHelper.ConvertToKeyValuePairs(json, out pairs);
-            AddToPairs(pairs);
+            Initialize(pairs);
         }
 
         public StringFields(List<StringField> pairs)
@@ -22,7 +22,7 @@ namespace JsonToStringArray
 
         public StringFields(IEnumerable<KeyValuePair<string, string>> pairs)
         {
-            AddToPairs(pairs);
+            Initialize(pairs);
         }
 
         public IEnumerator<StringField> GetEnumerator()
@@ -43,7 +43,7 @@ namespace JsonToStringArray
             }
         }
 
-        protected void AddToPairs(IEnumerable<KeyValuePair<string, string>> pairs)
+        protected virtual void Initialize(IEnumerable<KeyValuePair<string, string>> pairs)
         {
             Pairs = new List<StringField>();
             foreach (var p in pairs)
