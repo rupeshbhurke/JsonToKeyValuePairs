@@ -4,7 +4,7 @@ Generally JSON is converted to & from definite objects. But I had a requirement 
 
 * Code to Convert JSON String into following:
 1. List<KeyValuePair<String, String>>
-2  List<StringField>
+2. List<StringField>
 3. StringFields
 
 Where, 
